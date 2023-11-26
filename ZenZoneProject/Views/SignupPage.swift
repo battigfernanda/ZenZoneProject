@@ -18,6 +18,7 @@ struct SignUpPage: View {
 
     var body: some View {
         VStack {
+            
             TextField("Username", text: $username)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
