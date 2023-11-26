@@ -1,0 +1,23 @@
+
+[
+    {
+        "id": "1",
+        "title": "Mountain Meditation",
+        "description": "A guided imagery session to help you visualize serene landscapes.",
+        "duration": 8.13,
+        "category": "Guided Imagery",
+        "audioFileName": "MountainMeditation",
+        "imageName": "meditation_icon"
+    },
+    {
+        "id": "2",
+        "title": "Body Scan",
+        "description": "A guided imagery session to help you visualize serene landscapes.",
+        "duration": 23.12,
+        "category": "20MinuteBodyScan",
+        "audioFileName": "20MinuteBodyScan",
+        "imageName": "20MinuteBodyScan"
+    }
+    
+    
+]

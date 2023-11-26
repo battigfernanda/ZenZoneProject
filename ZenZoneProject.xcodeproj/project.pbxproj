@@ -14,6 +14,12 @@
 		D5DB8EFD2B12E0E600D9C1C1 /* MeditationSessionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8EFC2B12E0E600D9C1C1 /* MeditationSessionDetailView.swift */; };
 		D5DB8EFF2B12E0FF00D9C1C1 /* MeditationSessionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8EFE2B12E0FF00D9C1C1 /* MeditationSessionListView.swift */; };
 		D5DB8F012B12E10F00D9C1C1 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8F002B12E10F00D9C1C1 /* HomePage.swift */; };
+		D5DB8F042B12E41F00D9C1C1 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8F032B12E41F00D9C1C1 /* MediaPlayer.swift */; };
+		D5DB8F062B12E43A00D9C1C1 /* MeditationDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8F052B12E43A00D9C1C1 /* MeditationDataLoader.swift */; };
+		D5DB8F0B2B12E48600D9C1C1 /* MeditationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8F0A2B12E48600D9C1C1 /* MeditationSession.swift */; };
+		D5DB8F0E2B12E4C900D9C1C1 /* MeditationSession.json in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F0D2B12E4C900D9C1C1 /* MeditationSession.json */; };
+		D5DB8F102B12E4E800D9C1C1 /* MountainMeditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F0F2B12E4E800D9C1C1 /* MountainMeditation.mp3 */; };
+		D5DB8F122B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F112B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		D5DB8EFC2B12E0E600D9C1C1 /* MeditationSessionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSessionDetailView.swift; sourceTree = "<group>"; };
 		D5DB8EFE2B12E0FF00D9C1C1 /* MeditationSessionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSessionListView.swift; sourceTree = "<group>"; };
 		D5DB8F002B12E10F00D9C1C1 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		D5DB8F032B12E41F00D9C1C1 /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
+		D5DB8F052B12E43A00D9C1C1 /* MeditationDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationDataLoader.swift; sourceTree = "<group>"; };
+		D5DB8F0A2B12E48600D9C1C1 /* MeditationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSession.swift; sourceTree = "<group>"; };
+		D5DB8F0D2B12E4C900D9C1C1 /* MeditationSession.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MeditationSession.json; sourceTree = "<group>"; };
+		D5DB8F0F2B12E4E800D9C1C1 /* MountainMeditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MountainMeditation.mp3; sourceTree = "<group>"; };
+		D5DB8F112B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 20MinuteBodyScan.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +69,10 @@
 		D5DB8EEC2B12DD5300D9C1C1 /* ZenZoneProject */ = {
 			isa = PBXGroup;
 			children = (
+				D5DB8F0C2B12E4AD00D9C1C1 /* Data */,
+				D5DB8F092B12E46F00D9C1C1 /* Models */,
+				D5DB8F082B12E45D00D9C1C1 /* Resources */,
+				D5DB8F022B12E40F00D9C1C1 /* Services */,
 				D5DB8EFB2B12E0CB00D9C1C1 /* Views */,
 				D5DB8EED2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift */,
 				D5DB8EEF2B12DD5300D9C1C1 /* ContentView.swift */,
@@ -82,6 +98,40 @@
 				D5DB8F002B12E10F00D9C1C1 /* HomePage.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D5DB8F022B12E40F00D9C1C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D5DB8F032B12E41F00D9C1C1 /* MediaPlayer.swift */,
+				D5DB8F052B12E43A00D9C1C1 /* MeditationDataLoader.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D5DB8F082B12E45D00D9C1C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D5DB8F112B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 */,
+				D5DB8F0F2B12E4E800D9C1C1 /* MountainMeditation.mp3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D5DB8F092B12E46F00D9C1C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5DB8F0A2B12E48600D9C1C1 /* MeditationSession.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D5DB8F0C2B12E4AD00D9C1C1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D5DB8F0D2B12E4C900D9C1C1 /* MeditationSession.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +192,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DB8F0E2B12E4C900D9C1C1 /* MeditationSession.json in Resources */,
+				D5DB8F122B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 in Resources */,
+				D5DB8F102B12E4E800D9C1C1 /* MountainMeditation.mp3 in Resources */,
 				D5DB8EF52B12DD5600D9C1C1 /* Preview Assets.xcassets in Resources */,
 				D5DB8EF22B12DD5600D9C1C1 /* Assets.xcassets in Resources */,
 			);
@@ -156,9 +209,12 @@
 			files = (
 				D5DB8F012B12E10F00D9C1C1 /* HomePage.swift in Sources */,
 				D5DB8EFD2B12E0E600D9C1C1 /* MeditationSessionDetailView.swift in Sources */,
+				D5DB8F062B12E43A00D9C1C1 /* MeditationDataLoader.swift in Sources */,
 				D5DB8EF02B12DD5300D9C1C1 /* ContentView.swift in Sources */,
+				D5DB8F0B2B12E48600D9C1C1 /* MeditationSession.swift in Sources */,
 				D5DB8EEE2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift in Sources */,
 				D5DB8EFF2B12E0FF00D9C1C1 /* MeditationSessionListView.swift in Sources */,
+				D5DB8F042B12E41F00D9C1C1 /* MediaPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +351,7 @@
 				DEVELOPMENT_TEAM = C26735D5VT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access to record your meditation sessions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,6 +381,7 @@
 				DEVELOPMENT_TEAM = C26735D5VT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access to record your meditation sessions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
