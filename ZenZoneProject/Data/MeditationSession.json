@@ -12,12 +12,22 @@
     {
         "id": "2",
         "title": "Body Scan",
-        "description": "A guided imagery session to help you visualize serene landscapes.",
+        "description": "Body scan meditations invite you to move your focus of attention around the body, being curious about your experience and observing any sensations that you become aware of. ",
         "duration": 23.12,
-        "category": "20MinuteBodyScan",
+        "category": "Body Scan",
         "audioFileName": "20MinuteBodyScan",
         "imageName": "20MinuteBodyScan"
+    },
+    {
+        "id": "3",
+        "title": "Sitting Meditation",
+        "description": "In sitting meditations, the breath frequently serves as the primary point of focus during the practice. Occasionally, they also integrate an awareness of sounds, bodily sensations, thoughts, or emotions.",
+        "duration": 21.03,
+        "category": "Sitting Meditation",
+        "audioFileName": "SittingMeditation",
+        "imageName": "SittingMeditation"
     }
+    
     
     
 ]

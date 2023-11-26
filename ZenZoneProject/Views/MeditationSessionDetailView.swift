@@ -11,13 +11,12 @@ import AVFoundation
 struct MeditationSessionDetailView: View {
     let session: MeditationSession
 
-    @StateObject private var mediaPlayer = MediaPlayer.shared  // Use MediaPlayer as a state object
+    @StateObject private var mediaPlayer = MediaPlayer.shared
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                // Use the session image name to load the correct image
-                Image(session.imageName)  // Assuming you've added the images to your assets
+                Image(session.imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 200)
@@ -74,11 +73,11 @@ struct MeditationSessionDetailView: View {
         }
         .navigationBarTitle(Text(session.title), displayMode: .inline)
         .onAppear {
-            // Play the selected session audio when the view appears
+            // Playing the selected session audio when the view appears
             mediaPlayer.playAudio(file: session.audioFileName, ofType: "mp3")
         }
         .onDisappear {
-            // Stop the audio when the view disappears
+            // Stoping the audio when the view disappears
             mediaPlayer.stopAudio()
         }
     }

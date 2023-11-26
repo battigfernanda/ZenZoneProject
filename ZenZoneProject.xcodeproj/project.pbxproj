@@ -20,6 +20,7 @@
 		D5DB8F0E2B12E4C900D9C1C1 /* MeditationSession.json in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F0D2B12E4C900D9C1C1 /* MeditationSession.json */; };
 		D5DB8F102B12E4E800D9C1C1 /* MountainMeditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F0F2B12E4E800D9C1C1 /* MountainMeditation.mp3 */; };
 		D5DB8F122B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F112B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 */; };
+		D5DB8F142B12F5A400D9C1C1 /* SittingMeditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F132B12F5A400D9C1C1 /* SittingMeditation.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		D5DB8F0D2B12E4C900D9C1C1 /* MeditationSession.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MeditationSession.json; sourceTree = "<group>"; };
 		D5DB8F0F2B12E4E800D9C1C1 /* MountainMeditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MountainMeditation.mp3; sourceTree = "<group>"; };
 		D5DB8F112B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 20MinuteBodyScan.mp3; sourceTree = "<group>"; };
+		D5DB8F132B12F5A400D9C1C1 /* SittingMeditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SittingMeditation.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		D5DB8F082B12E45D00D9C1C1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D5DB8F132B12F5A400D9C1C1 /* SittingMeditation.mp3 */,
 				D5DB8F112B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 */,
 				D5DB8F0F2B12E4E800D9C1C1 /* MountainMeditation.mp3 */,
 			);
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5DB8F0E2B12E4C900D9C1C1 /* MeditationSession.json in Resources */,
+				D5DB8F142B12F5A400D9C1C1 /* SittingMeditation.mp3 in Resources */,
 				D5DB8F122B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 in Resources */,
 				D5DB8F102B12E4E800D9C1C1 /* MountainMeditation.mp3 in Resources */,
 				D5DB8EF52B12DD5600D9C1C1 /* Preview Assets.xcassets in Resources */,

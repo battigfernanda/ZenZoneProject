@@ -51,13 +51,8 @@ struct HomePageView: View {
     }
 }
 
-// Other subviews (HeaderView, SectionView, WellnessTrackingCard, CommunitySpotlightCard, ExploreSpotsCard) remain the same
 
-struct HomePageView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePageView()
-    }
-}
+
 
 
 struct HeaderView: View {
@@ -139,9 +134,11 @@ struct ExploreSpotsCard: View {
     }
 }
 
-//struct HomePageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomePageView()
-//    }
-//}
+struct HomePageView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomePageView()
+    }
+}
+
+
 

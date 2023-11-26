@@ -24,11 +24,8 @@ struct MeditationSessionListView: View {
                         VStack(alignment: .leading) {
                             Text(session.title)
                                 .fontWeight(.bold)
-
-                            Text(session.description)
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
                             
+                            // Removed the description from the list view
                             Text("Category: \(session.category)")
                                 .font(.caption)
                                 .foregroundColor(.blue)
@@ -50,5 +47,3 @@ struct MeditationSessionListView_Previews: PreviewProvider {
         MeditationSessionListView()
     }
 }
-
-
