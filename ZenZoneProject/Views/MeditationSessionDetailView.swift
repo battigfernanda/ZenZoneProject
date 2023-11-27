@@ -15,12 +15,12 @@ struct MeditationSessionDetailView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .center, spacing: 20) { // Align items to the center
-                Spacer() // Add spacer at the top to push content down
+            VStack(alignment: .center, spacing: 20) {
+                Spacer()
                 
                 Image(session.imageName)
                     .resizable()
-                    .aspectRatio(1, contentMode: .fit) // Square aspect ratio
+                    .aspectRatio(1, contentMode: .fit) 
                     .frame(width: 200, height: 200)
                     .clipped()
                     .cornerRadius(10)
@@ -81,9 +81,9 @@ struct MeditationSessionDetailView: View {
                 }
                 .padding()
 
-                Spacer() // Add another spacer at the bottom to ensure the content is centered
+                Spacer()
             }
-            .frame(maxWidth: .infinity) // Ensure VStack takes full width
+            .frame(maxWidth: .infinity)
         }
         .navigationBarTitle(Text(session.title), displayMode: .inline)
         .onAppear {
