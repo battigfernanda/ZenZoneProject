@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0265D642B14D55700BDF754 /* FireDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0265D632B14D55700BDF754 /* FireDBHelper.swift */; };
 		C08DE40F2B1411C50079FAE6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C08DE40E2B1411C50079FAE6 /* FirebaseAnalytics */; };
 		C08DE4112B1411C50079FAE6 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = C08DE4102B1411C50079FAE6 /* FirebaseAnalyticsOnDeviceConversion */; };
 		C08DE4132B1411C50079FAE6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C08DE4122B1411C50079FAE6 /* FirebaseAnalyticsSwift */; };
@@ -59,6 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0265D632B14D55700BDF754 /* FireDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDBHelper.swift; sourceTree = "<group>"; };
 		C08DE4442B1414A20079FAE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C08DE4462B14160D0079FAE6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D54E8CF42B14389D00C9DD23 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				D5DB8F032B12E41F00D9C1C1 /* MediaPlayer.swift */,
 				D5DB8F052B12E43A00D9C1C1 /* MeditationDataLoader.swift */,
 				D54E8CFC2B143E2600C9DD23 /* LocationManager.swift */,
+				C0265D632B14D55700BDF754 /* FireDBHelper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				D54E8CF92B14390300C9DD23 /* SignupPage.swift in Sources */,
 				D5DB8F0B2B12E48600D9C1C1 /* MeditationSession.swift in Sources */,
 				D5DB8EEE2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift in Sources */,
+				C0265D642B14D55700BDF754 /* FireDBHelper.swift in Sources */,
 				D5DB8EFF2B12E0FF00D9C1C1 /* MeditationSessionListView.swift in Sources */,
 				D54E8CF72B1438B600C9DD23 /* LoginPage.swift in Sources */,
 				D5DB8F042B12E41F00D9C1C1 /* MediaPlayer.swift in Sources */,
