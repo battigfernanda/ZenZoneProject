@@ -18,6 +18,9 @@
 		D54E8D072B14E7C000C9DD23 /* WellnessTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8D062B14E7BF00C9DD23 /* WellnessTrackingView.swift */; };
 		D54E8D092B14E7DE00C9DD23 /* CommunitySpotlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8D082B14E7DE00C9DD23 /* CommunitySpotlightView.swift */; };
 		D54E8D0B2B14E7F700C9DD23 /* ExploreSpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8D0A2B14E7F700C9DD23 /* ExploreSpotsView.swift */; };
+		D54E8D0D2B14EA2C00C9DD23 /* BreathSoundBody.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D54E8D0C2B14EA2C00C9DD23 /* BreathSoundBody.mp3 */; };
+		D54E8D0F2B14EAA200C9DD23 /* 4MinuteBodyScan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D54E8D0E2B14EAA200C9DD23 /* 4MinuteBodyScan.mp3 */; };
+		D54E8D112B14EBA300C9DD23 /* 20MinutesBells.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D54E8D102B14EBA300C9DD23 /* 20MinutesBells.mp3 */; };
 		D5DB8EEE2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8EED2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift */; };
 		D5DB8EF02B12DD5300D9C1C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8EEF2B12DD5300D9C1C1 /* ContentView.swift */; };
 		D5DB8EF22B12DD5600D9C1C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8EF12B12DD5600D9C1C1 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		D54E8D062B14E7BF00C9DD23 /* WellnessTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellnessTrackingView.swift; sourceTree = "<group>"; };
 		D54E8D082B14E7DE00C9DD23 /* CommunitySpotlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitySpotlightView.swift; sourceTree = "<group>"; };
 		D54E8D0A2B14E7F700C9DD23 /* ExploreSpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSpotsView.swift; sourceTree = "<group>"; };
+		D54E8D0C2B14EA2C00C9DD23 /* BreathSoundBody.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BreathSoundBody.mp3; sourceTree = "<group>"; };
+		D54E8D0E2B14EAA200C9DD23 /* 4MinuteBodyScan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4MinuteBodyScan.mp3; sourceTree = "<group>"; };
+		D54E8D102B14EBA300C9DD23 /* 20MinutesBells.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 20MinutesBells.mp3; sourceTree = "<group>"; };
 		D5DB8EEA2B12DD5300D9C1C1 /* ZenZoneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenZoneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DB8EED2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenZoneProjectApp.swift; sourceTree = "<group>"; };
 		D5DB8EEF2B12DD5300D9C1C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +152,9 @@
 		D5DB8F082B12E45D00D9C1C1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D54E8D102B14EBA300C9DD23 /* 20MinutesBells.mp3 */,
+				D54E8D0E2B14EAA200C9DD23 /* 4MinuteBodyScan.mp3 */,
+				D54E8D0C2B14EA2C00C9DD23 /* BreathSoundBody.mp3 */,
 				D54E8D042B14E3B500C9DD23 /* 5MinuteJustBells.mp3 */,
 				D54E8D022B14D4AC00C9DD23 /* CompassionateBreath.mp3 */,
 				D54E8D002B14D24B00C9DD23 /* BriefMeditation.mp3 */,
@@ -235,11 +244,14 @@
 				D5DB8F142B12F5A400D9C1C1 /* SittingMeditation.mp3 in Resources */,
 				D5DB8F122B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 in Resources */,
 				D5DB8F162B135E0C00D9C1C1 /* SelfGuidedMeditation.mp3 in Resources */,
+				D54E8D112B14EBA300C9DD23 /* 20MinutesBells.mp3 in Resources */,
 				D5DB8F102B12E4E800D9C1C1 /* MountainMeditation.mp3 in Resources */,
 				D54E8D052B14E3B500C9DD23 /* 5MinuteJustBells.mp3 in Resources */,
+				D54E8D0F2B14EAA200C9DD23 /* 4MinuteBodyScan.mp3 in Resources */,
 				D5DB8EF52B12DD5600D9C1C1 /* Preview Assets.xcassets in Resources */,
 				D5DB8EF22B12DD5600D9C1C1 /* Assets.xcassets in Resources */,
 				D54E8D032B14D4AC00C9DD23 /* CompassionateBreath.mp3 in Resources */,
+				D54E8D0D2B14EA2C00C9DD23 /* BreathSoundBody.mp3 in Resources */,
 				D54E8D012B14D24B00C9DD23 /* BriefMeditation.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
