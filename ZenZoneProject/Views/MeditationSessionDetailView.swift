@@ -15,11 +15,13 @@ struct MeditationSessionDetailView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .center, spacing: 20) { // Align items to the center
+                Spacer() // Add spacer at the top to push content down
+                
                 Image(session.imageName)
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 200)
+                    .aspectRatio(1, contentMode: .fit) // Square aspect ratio
+                    .frame(width: 200, height: 200)
                     .clipped()
                     .cornerRadius(10)
                     .shadow(radius: 5)
@@ -31,21 +33,34 @@ struct MeditationSessionDetailView: View {
                 Text(session.description)
                     .font(.body)
                     .foregroundColor(.secondary)
+                    .padding(15)
 
                 HStack {
-                    Text("Duration: \(session.duration) mins")
+                    Text("Duration: \(String(format: "%.2f", session.duration)) mins")
                         .font(.subheadline)
                         .foregroundColor(.gray)
+                        .padding(10)
 
                     Spacer()
 
                     Text("Category: \(session.category)")
                         .font(.subheadline)
                         .foregroundColor(.gray)
+                        .padding(10)
                 }
 
-                // Audio player controls
-                VStack {
+                // Audio player controls and progress
+                VStack(spacing: 15) {
+                    HStack {
+                        Text(mediaPlayer.currentTimeString) // Current time
+                        Spacer()
+                        Text(mediaPlayer.totalDurationString) // Total duration
+                    }
+                    .font(.caption)
+                    .foregroundColor(.gray)
+
+                    Slider(value: $mediaPlayer.progress, in: 0...1, step: 0.01)
+
                     Button(action: {
                         if mediaPlayer.isPlaying {
                             mediaPlayer.pauseAudio()
@@ -53,31 +68,28 @@ struct MeditationSessionDetailView: View {
                             mediaPlayer.playAudio(file: session.audioFileName, ofType: "mp3")
                         }
                     }) {
-                        Label(mediaPlayer.isPlaying ? "Pause Session" : "Play Session", systemImage: mediaPlayer.isPlaying ? "pause.circle.fill" : "play.circle.fill")
-                            .labelStyle(TitleOnlyLabelStyle())
-                            .font(.title)
+                        Image(systemName: mediaPlayer.isPlaying ? "pause.circle.fill" : "play.circle.fill")
+                            .font(.system(size: 44))
+                            .foregroundColor(.blue)
                             .padding()
-                            .foregroundColor(.white)
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                    }
 
-                    // Progress slider reflecting the audio progress
-                    Slider(value: $mediaPlayer.progress, in: 0...1, step: 0.01)
-                        .padding()
+                        Text(mediaPlayer.isPlaying ? "Pause Session" : "Play Session")
+                            .font(.headline)
+                            .foregroundColor(.blue)
+                    }
+                    .buttonStyle(PlainButtonStyle())
                 }
-                
-                Spacer()
+                .padding()
+
+                Spacer() // Add another spacer at the bottom to ensure the content is centered
             }
-            .padding()
+            .frame(maxWidth: .infinity) // Ensure VStack takes full width
         }
         .navigationBarTitle(Text(session.title), displayMode: .inline)
         .onAppear {
-            // Playing the selected session audio when the view appears
-            mediaPlayer.playAudio(file: session.audioFileName, ofType: "mp3")
+             mediaPlayer.playAudio(file: session.audioFileName, ofType: "mp3")
         }
         .onDisappear {
-            // Stoping the audio when the view disappears
             mediaPlayer.stopAudio()
         }
     }
@@ -88,5 +100,3 @@ struct MeditationSessionDetailView_Previews: PreviewProvider {
         MeditationSessionDetailView(session: MeditationSession(id: "1", title: "Mountain Meditation", description: "This is a sample description for a meditation session.", duration: 8.13, category: "Relaxation", audioFileName: "MountainMeditation", imageName: "meditation_icon"))
     }
 }
-
-

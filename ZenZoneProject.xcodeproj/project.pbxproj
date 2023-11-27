@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D54E8CF52B14389D00C9DD23 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8CF42B14389D00C9DD23 /* ProfilePage.swift */; };
+		D54E8CF72B1438B600C9DD23 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8CF62B1438B600C9DD23 /* LoginPage.swift */; };
+		D54E8CF92B14390300C9DD23 /* SignupPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8CF82B14390300C9DD23 /* SignupPage.swift */; };
 		D5DB8EEE2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8EED2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift */; };
 		D5DB8EF02B12DD5300D9C1C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8EEF2B12DD5300D9C1C1 /* ContentView.swift */; };
 		D5DB8EF22B12DD5600D9C1C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8EF12B12DD5600D9C1C1 /* Assets.xcassets */; };
@@ -21,9 +24,13 @@
 		D5DB8F102B12E4E800D9C1C1 /* MountainMeditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F0F2B12E4E800D9C1C1 /* MountainMeditation.mp3 */; };
 		D5DB8F122B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F112B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 */; };
 		D5DB8F142B12F5A400D9C1C1 /* SittingMeditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F132B12F5A400D9C1C1 /* SittingMeditation.mp3 */; };
+		D5DB8F162B135E0C00D9C1C1 /* SelfGuidedMeditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F152B135E0C00D9C1C1 /* SelfGuidedMeditation.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D54E8CF42B14389D00C9DD23 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		D54E8CF62B1438B600C9DD23 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		D54E8CF82B14390300C9DD23 /* SignupPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPage.swift; sourceTree = "<group>"; };
 		D5DB8EEA2B12DD5300D9C1C1 /* ZenZoneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenZoneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DB8EED2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenZoneProjectApp.swift; sourceTree = "<group>"; };
 		D5DB8EEF2B12DD5300D9C1C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +46,7 @@
 		D5DB8F0F2B12E4E800D9C1C1 /* MountainMeditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MountainMeditation.mp3; sourceTree = "<group>"; };
 		D5DB8F112B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 20MinuteBodyScan.mp3; sourceTree = "<group>"; };
 		D5DB8F132B12F5A400D9C1C1 /* SittingMeditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SittingMeditation.mp3; sourceTree = "<group>"; };
+		D5DB8F152B135E0C00D9C1C1 /* SelfGuidedMeditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SelfGuidedMeditation.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,9 @@
 				D5DB8EFC2B12E0E600D9C1C1 /* MeditationSessionDetailView.swift */,
 				D5DB8EFE2B12E0FF00D9C1C1 /* MeditationSessionListView.swift */,
 				D5DB8F002B12E10F00D9C1C1 /* HomePage.swift */,
+				D54E8CF42B14389D00C9DD23 /* ProfilePage.swift */,
+				D54E8CF62B1438B600C9DD23 /* LoginPage.swift */,
+				D54E8CF82B14390300C9DD23 /* SignupPage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +125,7 @@
 		D5DB8F082B12E45D00D9C1C1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D5DB8F152B135E0C00D9C1C1 /* SelfGuidedMeditation.mp3 */,
 				D5DB8F132B12F5A400D9C1C1 /* SittingMeditation.mp3 */,
 				D5DB8F112B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 */,
 				D5DB8F0F2B12E4E800D9C1C1 /* MountainMeditation.mp3 */,
@@ -198,6 +210,7 @@
 				D5DB8F0E2B12E4C900D9C1C1 /* MeditationSession.json in Resources */,
 				D5DB8F142B12F5A400D9C1C1 /* SittingMeditation.mp3 in Resources */,
 				D5DB8F122B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 in Resources */,
+				D5DB8F162B135E0C00D9C1C1 /* SelfGuidedMeditation.mp3 in Resources */,
 				D5DB8F102B12E4E800D9C1C1 /* MountainMeditation.mp3 in Resources */,
 				D5DB8EF52B12DD5600D9C1C1 /* Preview Assets.xcassets in Resources */,
 				D5DB8EF22B12DD5600D9C1C1 /* Assets.xcassets in Resources */,
@@ -211,13 +224,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54E8CF52B14389D00C9DD23 /* ProfilePage.swift in Sources */,
 				D5DB8F012B12E10F00D9C1C1 /* HomePage.swift in Sources */,
 				D5DB8EFD2B12E0E600D9C1C1 /* MeditationSessionDetailView.swift in Sources */,
 				D5DB8F062B12E43A00D9C1C1 /* MeditationDataLoader.swift in Sources */,
 				D5DB8EF02B12DD5300D9C1C1 /* ContentView.swift in Sources */,
+				D54E8CF92B14390300C9DD23 /* SignupPage.swift in Sources */,
 				D5DB8F0B2B12E48600D9C1C1 /* MeditationSession.swift in Sources */,
 				D5DB8EEE2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift in Sources */,
 				D5DB8EFF2B12E0FF00D9C1C1 /* MeditationSessionListView.swift in Sources */,
+				D54E8CF72B1438B600C9DD23 /* LoginPage.swift in Sources */,
 				D5DB8F042B12E41F00D9C1C1 /* MediaPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

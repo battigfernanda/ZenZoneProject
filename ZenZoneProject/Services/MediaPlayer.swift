@@ -7,21 +7,27 @@
 
 import Foundation
 import AVFoundation
-import Combine
 
 class MediaPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
     static let shared = MediaPlayer()
-    
+
     private var audioPlayer: AVAudioPlayer?
     private var timer: Timer?
-    
-    
+
     @Published var isPlaying = false
     @Published var currentTime = TimeInterval(0)
     @Published var duration = TimeInterval(0)
     @Published var progress = Float(0) // Represents the audio progress as a percentage
 
-    override private init() {
+    var currentTimeString: String {
+        return formatTime(time: currentTime)
+    }
+
+    var totalDurationString: String {
+        return formatTime(time: duration)
+    }
+
+    override init() {
         super.init()
         configureAudioSession()
     }
@@ -43,11 +49,11 @@ class MediaPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
 
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-            audioPlayer?.prepareToPlay()
             audioPlayer?.delegate = self
-            audioPlayer?.play()
+            audioPlayer?.prepareToPlay()
             isPlaying = true
             duration = audioPlayer?.duration ?? 0
+            audioPlayer?.play()
             startTimer()
         } catch {
             print("Error playing audio file: \(error.localizedDescription)")
@@ -69,6 +75,22 @@ class MediaPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
         progress = 0
     }
 
+    func prepareAudio(file name: String, ofType type: String) {
+        guard let path = Bundle.main.path(forResource: name, ofType: type) else {
+            print("Audio file not found")
+            return
+        }
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+            audioPlayer?.delegate = self
+            audioPlayer?.prepareToPlay()
+            duration = audioPlayer?.duration ?? 0
+        } catch {
+            print("Error preparing audio file: \(error.localizedDescription)")
+        }
+    }
+
     private func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
             self?.updateAudioProgress()
@@ -82,10 +104,16 @@ class MediaPlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
 
     private func updateAudioProgress() {
         currentTime = audioPlayer?.currentTime ?? 0
-        progress = Float(currentTime / duration)
+        progress = Float(currentTime / (duration == 0 ? 1 : duration))
     }
 
-    // MARK: - AVAudioPlayerDelegate
+    private func formatTime(time: TimeInterval) -> String {
+        let minutes = Int(time) / 60
+        let seconds = Int(time) % 60
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
+
+    // MARK: - AVAudioPlayerDelegate methods
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         DispatchQueue.main.async { [weak self] in
             self?.isPlaying = false

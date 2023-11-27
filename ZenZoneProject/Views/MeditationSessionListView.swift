@@ -25,7 +25,7 @@ struct MeditationSessionListView: View {
                             Text(session.title)
                                 .fontWeight(.bold)
                             
-                            // Removed the description from the list view
+                        
                             Text("Category: \(session.category)")
                                 .font(.caption)
                                 .foregroundColor(.blue)

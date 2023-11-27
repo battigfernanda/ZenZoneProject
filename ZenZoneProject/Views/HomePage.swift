@@ -8,24 +8,31 @@
 import SwiftUI
 
 
+import SwiftUI
+
 struct HomePageView: View {
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack {
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(alignment: .leading) {
                     // Header with Welcome Message
                     HeaderView()
-
+                    
                     // Link to Meditation Session List View
                     SectionView(title: "Meditation Sessions") {
                         NavigationLink(destination: MeditationSessionListView()) {
-                            Text("View All Meditation Sessions")
-                                .fontWeight(.medium)
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
+                            HStack {
+                                Text("View All Meditation Sessions")
+                                    .fontWeight(.medium)
+                                    .foregroundColor(.white)
+                                Spacer()
+                                Image(systemName: "arrow.right.circle")
+                                    .foregroundColor(.white)
+                            }
+                            .padding()
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .leading, endPoint: .trailing))
+                            .cornerRadius(10)
+                            .shadow(radius: 5)
                         }
                     }
 
@@ -47,17 +54,26 @@ struct HomePageView: View {
                 .padding(.horizontal)
             }
             .navigationBarTitle("ZenZone", displayMode: .inline)
+            .navigationBarItems(trailing: ProfileButton())
         }
     }
 }
 
-
-
-
+struct ProfileButton: View {
+    var body: some View {
+        Button(action: {
+            // action for profile button
+        }) {
+            Image(systemName: "person.crop.circle")
+                .imageScale(.large)
+                .foregroundColor(.blue)
+        }
+    }
+}
 
 struct HeaderView: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
+        VStack(alignment: .leading, spacing: 8) {
             Text("Welcome to ZenZone")
                 .font(.largeTitle)
                 .fontWeight(.bold)

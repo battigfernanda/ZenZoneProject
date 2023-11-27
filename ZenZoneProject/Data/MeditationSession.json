@@ -26,7 +26,20 @@
         "category": "Sitting Meditation",
         "audioFileName": "SittingMeditation",
         "imageName": "SittingMeditation"
+    },
+    {
+        "id": "4",
+        "title": "Sitting Meditation",
+        "description": "Sometimes we wish to practice a meditation of our choosing without any guidance. These audio tracks begin and end with the sound of a bell ringing, to orientate you to the practice and to signify the end of the meditation.",
+        "duration": 10.32,
+        "category": "Self Guided Meditation",
+        "audioFileName": "SelfGuidedMeditation",
+        "imageName": "SelfGuidedMeditation"
     }
+    
+    
+    
+   
     
     
     
