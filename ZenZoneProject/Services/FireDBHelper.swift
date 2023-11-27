@@ -14,6 +14,15 @@ class FireDBHelper : ObservableObject{
     private static var shared : FireDBHelper?
     private var db : Firestore
     
+    private let COLLECTION_USERS = "Users"
+    private let ATTRIBUTE_FIRST_NAME = "firstName"
+    private let ATTRIBUTE_LAST_NAME = "lastName"
+    private let ATTRIBUTE_AGE = "age"
+    private let ATTRIBUTE_USERNAME = "username"
+    private let ATTRIBUTE_EMAIL = "email"
+    private let ATTRIBUTE_PASSWORD = "password"
+    
+    
     private init(database : Firestore){
         self.db = database
     }
@@ -26,4 +35,56 @@ class FireDBHelper : ObservableObject{
         
         return self.shared!
     }
+}
+
+
+func insertUser(user : User ){
+    do{
+        try self.db
+            .collection(self.COLLECTION_USERS)
+            .addDocument(from: user)
+    }catch let err as NSError{
+        print(#function, "Unable to insert due to error  : \(err)")
+    }
+}
+
+
+func updateUser(indexToUpdate : Int){
+    let documentID = self.userList[indexToUpdate].id!
+    
+    self.db
+        .collection(COLLECTION_USERS)
+        .document(documentID)
+        .updateData([
+            ATTRIBUTE_FIRST_NAME : self.userList[indexToUpdate].firstName
+            ATTRIBUTE_LAST_NAME : self.userList[indexToUpdate].lastName
+            ATTRIBUTE_AGE : self.userList[indexToUpdate].age
+            ATTRIBUTE_USERNAME : self.userList[indexToUpdate].username
+            ATTRIBUTE_EMAIL : self.userList[indexToUpdate].email
+            ATTRIBUTE_PASSWORD : self.userList[indexToUpdate].password
+        ]){error in
+            
+            if let err = error {
+                print(#function, "Unable to update document due to error : \(err)")
+            }else{
+                print(#function, "Document successfully updated")
+            }
+        }
+    
+}
+
+func deleteUser(indexToDelete : Int){
+    let documentID = self.userList[indexToUpdate].id!
+    
+    self.db
+        .collection(COLLECTION_USERS)
+        .documet(documentID)
+        .delete{ error in
+            if let err = error{
+                print(#function, "Unable to delete due to error : \(err)")
+            }else{
+                print(#function, "Document deleted successfully")
+            }
+        }
+
 }
