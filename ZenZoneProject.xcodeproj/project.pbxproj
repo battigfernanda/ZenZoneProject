@@ -34,6 +34,7 @@
 		C08DE43F2B1411C50079FAE6 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C08DE43E2B1411C50079FAE6 /* FirebaseRemoteConfigSwift */; };
 		C08DE4412B1411C50079FAE6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C08DE4402B1411C50079FAE6 /* FirebaseStorage */; };
 		C08DE4432B1411C50079FAE6 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C08DE4422B1411C50079FAE6 /* FirebaseStorageCombine-Community */; };
+		C08DE4452B1414A20079FAE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C08DE4442B1414A20079FAE6 /* GoogleService-Info.plist */; };
 		D54E8CF52B14389D00C9DD23 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8CF42B14389D00C9DD23 /* ProfilePage.swift */; };
 		D54E8CF72B1438B600C9DD23 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8CF62B1438B600C9DD23 /* LoginPage.swift */; };
 		D54E8CF92B14390300C9DD23 /* SignupPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8CF82B14390300C9DD23 /* SignupPage.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C08DE4442B1414A20079FAE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D54E8CF42B14389D00C9DD23 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		D54E8CF62B1438B600C9DD23 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		D54E8CF82B14390300C9DD23 /* SignupPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPage.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		D5DB8EEC2B12DD5300D9C1C1 /* ZenZoneProject */ = {
 			isa = PBXGroup;
 			children = (
+				C08DE4442B1414A20079FAE6 /* GoogleService-Info.plist */,
 				D5DB8F0C2B12E4AD00D9C1C1 /* Data */,
 				D5DB8F092B12E46F00D9C1C1 /* Models */,
 				D5DB8F082B12E45D00D9C1C1 /* Resources */,
@@ -299,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C08DE4452B1414A20079FAE6 /* GoogleService-Info.plist in Resources */,
 				D5DB8F0E2B12E4C900D9C1C1 /* MeditationSession.json in Resources */,
 				D5DB8F142B12F5A400D9C1C1 /* SittingMeditation.mp3 in Resources */,
 				D5DB8F122B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 in Resources */,
