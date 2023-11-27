@@ -11,7 +11,7 @@
     },
     {
         "id": "2",
-        "title": "Body Scan",
+        "title": "Body Scan Meditation",
         "description": "Body scan meditations invite you to move your focus of attention around the body, being curious about your experience and observing any sensations that you become aware of. ",
         "duration": 23.12,
         "category": "Body Scan",
@@ -29,18 +29,42 @@
     },
     {
         "id": "4",
-        "title": "Sitting Meditation",
+        "title": "10 Minute Bell Meditation",
         "description": "Sometimes we wish to practice a meditation of our choosing without any guidance. These audio tracks begin and end with the sound of a bell ringing, to orientate you to the practice and to signify the end of the meditation.",
         "duration": 10.32,
         "category": "Self Guided Meditation",
         "audioFileName": "SelfGuidedMeditation",
         "imageName": "SelfGuidedMeditation"
+    },
+    {
+        "id": "5",
+        "title": "5 Minute Brief Meditation",
+        "description": "This short mindfulness exercises focus on bringing awareness to the process of breathing. As something that we are doing all of the time, watching our breath allows us to come into the present moment and practice being aware.",
+        "duration": 4.05,
+        "category": "Mindfulness Meditation",
+        "audioFileName": "BriefMeditation",
+        "imageName": "BriefMeditation"
+    },
+    {
+        "id": "6",
+        "title": "Compassionate Breath Meditation",
+        "description": "Sitting meditations often use the breath as the central focus of the practice. At times they incorporate awareness of sounds, bodily sensations, thoughts or feelings.",
+        "duration": 11.33,
+        "category": "Sitting Meditation",
+        "audioFileName": "CompassionateBreath",
+        "imageName": "CompassionateBreath"
+    },
+    {
+        "id": "7",
+        "title": "5 Minute Bell Meditation",
+        "description": "Sometimes we wish to practice a meditation of our choosing without any guidance. These audio tracks begin and end with the sound of a bell ringing, to orientate you to the practice and to signify the end of the meditation.",
+        "duration": 5.32,
+        "category": "Self Guided Meditation",
+        "audioFileName": "5MinuteJustBells",
+        "imageName": "SelfGuidedMeditation"
     }
     
     
-    
-   
-    
-    
+
     
 ]

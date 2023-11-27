@@ -5,7 +5,6 @@
 //  Created by Fernanda Battig on 2023-11-25.
 //
 
-
 import SwiftUI
 
 struct HomePageView: View {
@@ -16,38 +15,17 @@ struct HomePageView: View {
                     // Header with Welcome Message
                     HeaderView()
                     
-                    // Link to Meditation Session List View
-                    SectionView(title: "Meditation Sessions") {
-                        NavigationLink(destination: MeditationSessionListView()) {
-                            HStack {
-                                Text("View All Meditation Sessions")
-                                    .fontWeight(.medium)
-                                    .foregroundColor(.white)
-                                Spacer()
-                                Image(systemName: "arrow.right.circle")
-                                    .foregroundColor(.white)
-                            }
-                            .padding()
-                            .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .leading, endPoint: .trailing))
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
-                        }
-                    }
+                    // Meditation Session List View
+                    SectionLink(title: "Meditation Sessions", destination: MeditationSessionListView(), buttonText: "View All Meditation Sessions")
 
                     // Wellness Tracking
-                    SectionView(title: "Your Wellness Stats") {
-                        WellnessTrackingCard()
-                    }
+                    SectionLink(title: "Your Wellness Stats", destination: WellnessTrackingView(), buttonText: "Track Your Wellness")
 
                     // Community Spotlight
-                    SectionView(title: "Community Spotlight") {
-                        CommunitySpotlightCard()
-                    }
+                    SectionLink(title: "Community Spotlight", destination: CommunitySpotlightView(), buttonText: "Join the Community")
 
                     // Explore Serene Spots
-                    SectionView(title: "Explore Serene Spots") {
-                        ExploreSpotsCard()
-                    }
+                    SectionLink(title: "Explore Serene Spots", destination: ExploreSpotsView(), buttonText: "Explore Serene Spots")
                 }
                 .padding(.horizontal)
             }
@@ -57,10 +35,35 @@ struct HomePageView: View {
     }
 }
 
+// Reusable Section Link View
+struct SectionLink<Destination: View>: View {
+    var title: String
+    var destination: Destination
+    var buttonText: String
+
+    var body: some View {
+        SectionView(title: title) {
+            NavigationLink(destination: destination) {
+                HStack {
+                    Text(buttonText)
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                    Spacer()
+                    Image(systemName: "arrow.right.circle")
+                        .foregroundColor(.white)
+                }
+                .padding()
+                .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .leading, endPoint: .trailing))
+                .cornerRadius(10)
+                .shadow(radius: 5)
+            }
+        }
+    }
+}
 struct ProfileButton: View {
     var body: some View {
         Button(action: {
-            // action for profile button
+            // Action for profile button
         }) {
             Image(systemName: "person.crop.circle")
                 .imageScale(.large)
@@ -118,33 +121,22 @@ struct MeditationSessionCard: View {
     }
 }
 
-struct WellnessTrackingCard: View {
+// Dummy views to view preview
+struct WellnessTrackingView: View {
     var body: some View {
-        // Add content for Wellness Tracking
-        Text("Wellness Tracking Content")
-            .padding()
-            .background(Color.gray.opacity(0.1))
-            .cornerRadius(10)
+        Text("Wellness Tracking View")
     }
 }
 
-struct CommunitySpotlightCard: View {
+struct CommunitySpotlightView: View {
     var body: some View {
-        // Add content for Community Spotlight
-        Text("Community Spotlight Content")
-            .padding()
-            .background(Color.gray.opacity(0.1))
-            .cornerRadius(10)
+        Text("Community Spotlight View")
     }
 }
 
-struct ExploreSpotsCard: View {
+struct ExploreSpotsView: View {
     var body: some View {
-        // Add content for Explore Spots
-        Text("Explore Spots Content")
-            .padding()
-            .background(Color.gray.opacity(0.1))
-            .cornerRadius(10)
+        Text("Explore Spots View")
     }
 }
 
@@ -153,6 +145,3 @@ struct HomePageView_Previews: PreviewProvider {
         HomePageView()
     }
 }
-
-
-
