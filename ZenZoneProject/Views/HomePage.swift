@@ -62,7 +62,8 @@ struct SectionLink<Destination: View>: View {
 }
 struct ProfileButton: View {
     var body: some View {
-        Button(action: {
+        Button(
+            action: {
             // Action for profile button
         }) {
             Image(systemName: "person.crop.circle")
