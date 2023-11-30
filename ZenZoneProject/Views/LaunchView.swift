@@ -1,15 +1,31 @@
 //
 //  LaunchView.swift
-//  ZenZoneProject
+//  test
 //
-//  Created by Muhammad Haris on 30/11/2023.
+//  Created by Muhammad Haris on 28/11/2023.
 //
 
 import SwiftUI
 
 struct LaunchView: View {
+    
+    @State private var rootView : RootView = .login
+    let fireDBHelper : FireDBHelper = FireDBHelper.getInstance()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            
+            switch self.rootView{
+            case .signup:
+                SignupPage(rootView: self.$rootView).environmentObject(self.fireDBHelper)
+            case .login:
+                LoginPage(rootView: self.$rootView)
+            case .main:
+                HomePageView(rootView: self.$rootView).environmentObject(self.fireDBHelper)
+            
+                
+            }
+        }
     }
 }
 

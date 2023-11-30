@@ -10,33 +10,38 @@ import SwiftUI
 struct HomePageView: View {
     @Binding var rootView : RootView
     var body: some View {
-        NavigationView {
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(alignment: .leading) {
-                    // Header with Welcome Message
-                    HeaderView()
-                    
-                    // Meditation Session List View
-                    SectionLink(title: "Meditation Sessions", destination: MeditationSessionListView(), buttonText: "View All Meditation Sessions")
-
-                    // Wellness Tracking
-                    SectionLink(title: "Your Wellness Stats", destination: WellnessTrackingView(), buttonText: "Track Your Wellness")
-
-                    // Community Spotlight
-                    SectionLink(title: "Community Spotlight", destination: CommunitySpotlightView(), buttonText: "Join the Community")
-
-                    // Explore Serene Spots
-                    SectionLink(title: "Explore Serene Spots", destination: ExploreSpotsView(), buttonText: "Explore Serene Spots")
-                }
-                .padding(.horizontal)
-            }
-            .navigationBarTitle("ZenZone", displayMode: .inline)
-            .navigationBarItems(trailing: ProfileButton())
-//            .navigationBarItems(trailing: SignOutButton())
-            
-            
-        }
         
+            NavigationView {
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(alignment: .leading) {
+                        // Header with Welcome Message
+                        HeaderView()
+                        
+                        // Meditation Session List View
+                        SectionLink(title: "Meditation Sessions", destination: MeditationSessionListView(), buttonText: "View All Meditation Sessions", rootView: self.$rootView)
+                        
+                        // Wellness Tracking
+                        SectionLink(title: "Your Wellness Stats", destination: WellnessTrackingView(), buttonText: "Track Your Wellness", rootView: self.$rootView)
+                        
+                        // Community Spotlight
+                        SectionLink(title: "Community Spotlight", destination: CommunitySpotlightView(), buttonText: "Join the Community", rootView: self.$rootView)
+                        
+                        // Explore Serene Spots
+                        SectionLink(title: "Explore Serene Spots", destination: ExploreSpotsView(), buttonText: "Explore Serene Spots", rootView: self.$rootView)
+                    }
+                    .padding(.horizontal)
+                    
+                    
+                }
+                .navigationBarTitle("ZenZone", displayMode: .inline)
+                .navigationBarItems(trailing: ProfileButton())
+                //            .navigationBarItems(trailing: SignOutButton())
+                
+                
+                
+            }
+            
+            
         
     }
     
@@ -47,6 +52,8 @@ struct SectionLink<Destination: View>: View {
     var title: String
     var destination: Destination
     var buttonText: String
+    @Binding var rootView : RootView
+
 
     var body: some View {
         SectionView(title: title) {
@@ -64,7 +71,21 @@ struct SectionLink<Destination: View>: View {
                 .cornerRadius(10)
                 .shadow(radius: 5)
             }
+            .toolbar{
+                ToolbarItem{
+                    Button(action: signOut) {
+                        Label("Add Item", systemImage: "door.right.hand.open")
+                        
+                            .foregroundColor(.red)
+                    }
+
+                }
+            }
         }
+        
+    }
+    private func signOut(){
+        self.rootView = .login
     }
 }
 struct ProfileButton: View {

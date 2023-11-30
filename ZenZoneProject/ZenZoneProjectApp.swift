@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
 
 @main
 struct ZenZoneProjectApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            HomePageView()
+            LaunchView()
         }
     }
 }
