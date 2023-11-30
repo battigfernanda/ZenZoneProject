@@ -39,6 +39,7 @@ struct HomePageView: View {
                             ToolbarItem {
                                 Button(action: signOut) {
                                     Label("Add Item", systemImage: "door.right.hand.open")
+                                    
                                         .foregroundColor(.red)
                                 }
                             }
