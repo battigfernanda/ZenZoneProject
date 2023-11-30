@@ -23,6 +23,8 @@
 		C05AC1F12B18CEE800032293 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C05AC1F02B18CEE800032293 /* FirebaseStorage */; };
 		C05AC1F32B18CEE800032293 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C05AC1F22B18CEE800032293 /* FirebaseStorageCombine-Community */; };
 		C05AC1F52B18D0B700032293 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AC1F42B18D0B700032293 /* User.swift */; };
+		C05AC1F72B18D11300032293 /* FireDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AC1F62B18D11300032293 /* FireDBHelper.swift */; };
+		C05AC1F92B18D1EE00032293 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C05AC1F82B18D1EE00032293 /* GoogleService-Info.plist */; };
 		D54E8CF52B14389D00C9DD23 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8CF42B14389D00C9DD23 /* ProfilePage.swift */; };
 		D54E8CF72B1438B600C9DD23 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8CF62B1438B600C9DD23 /* LoginPage.swift */; };
 		D54E8CF92B14390300C9DD23 /* SignupPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8CF82B14390300C9DD23 /* SignupPage.swift */; };
@@ -56,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		C05AC1F42B18D0B700032293 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C05AC1F62B18D11300032293 /* FireDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDBHelper.swift; sourceTree = "<group>"; };
+		C05AC1F82B18D1EE00032293 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D54E8CF42B14389D00C9DD23 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		D54E8CF62B1438B600C9DD23 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		D54E8CF82B14390300C9DD23 /* SignupPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPage.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 		D5DB8EEC2B12DD5300D9C1C1 /* ZenZoneProject */ = {
 			isa = PBXGroup;
 			children = (
+				C05AC1F82B18D1EE00032293 /* GoogleService-Info.plist */,
 				D5DB8F0C2B12E4AD00D9C1C1 /* Data */,
 				D5DB8F092B12E46F00D9C1C1 /* Models */,
 				D5DB8F082B12E45D00D9C1C1 /* Resources */,
@@ -177,6 +182,7 @@
 				D5DB8F032B12E41F00D9C1C1 /* MediaPlayer.swift */,
 				D5DB8F052B12E43A00D9C1C1 /* MeditationDataLoader.swift */,
 				D54E8CFC2B143E2600C9DD23 /* LocationManager.swift */,
+				C05AC1F62B18D11300032293 /* FireDBHelper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 				D5DB8F0E2B12E4C900D9C1C1 /* MeditationSession.json in Resources */,
 				D5DB8F142B12F5A400D9C1C1 /* SittingMeditation.mp3 in Resources */,
 				D5DB8F122B12E50300D9C1C1 /* 20MinuteBodyScan.mp3 in Resources */,
+				C05AC1F92B18D1EE00032293 /* GoogleService-Info.plist in Resources */,
 				D5DB8F162B135E0C00D9C1C1 /* SelfGuidedMeditation.mp3 in Resources */,
 				D54E8D112B14EBA300C9DD23 /* 20MinutesBells.mp3 in Resources */,
 				D5DB8F102B12E4E800D9C1C1 /* MountainMeditation.mp3 in Resources */,
@@ -323,6 +330,7 @@
 				D54E8D0B2B14E7F700C9DD23 /* ExploreSpotsView.swift in Sources */,
 				D5DB8F062B12E43A00D9C1C1 /* MeditationDataLoader.swift in Sources */,
 				D5DB8EF02B12DD5300D9C1C1 /* ContentView.swift in Sources */,
+				C05AC1F72B18D11300032293 /* FireDBHelper.swift in Sources */,
 				C05AC1F52B18D0B700032293 /* User.swift in Sources */,
 				D54E8CFB2B143E0300C9DD23 /* NearbyMeditationSpotsView.swift in Sources */,
 				D54E8CF92B14390300C9DD23 /* SignupPage.swift in Sources */,
@@ -466,7 +474,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ZenZoneProject/Preview Content\"";
-				DEVELOPMENT_TEAM = C26735D5VT;
+				DEVELOPMENT_TEAM = YV6DXDN3TS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires location services to find serene spots near you.";
@@ -477,6 +485,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,7 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ZenZoneProject/Preview Content\"";
-				DEVELOPMENT_TEAM = C26735D5VT;
+				DEVELOPMENT_TEAM = YV6DXDN3TS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires location services to find serene spots near you.";
@@ -509,6 +518,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
