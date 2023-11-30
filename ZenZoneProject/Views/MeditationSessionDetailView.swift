@@ -11,6 +11,7 @@ import AVFoundation
 struct MeditationSessionDetailView: View {
     let session: MeditationSession
 
+
     @StateObject private var mediaPlayer = MediaPlayer.shared
 
     var body: some View {

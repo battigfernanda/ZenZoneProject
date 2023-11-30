@@ -18,7 +18,7 @@ struct ZenZoneProjectApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomePageView()
+            LaunchView()
         }
     }
 }

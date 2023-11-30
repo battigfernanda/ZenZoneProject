@@ -9,7 +9,10 @@
 import SwiftUI
 
 struct HomePageView: View {
+    @Binding var rootView : RootView
+
     var body: some View {
+        
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading) {
@@ -148,11 +151,11 @@ struct ExploreSpotsCard: View {
     }
 }
 
-struct HomePageView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePageView()
-    }
-}
+//struct HomePageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomePageView(rootView: <#Binding<RootView>#>)
+//    }
+//}
 
 
 

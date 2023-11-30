@@ -11,6 +11,8 @@
 import SwiftUI
 
 struct ProfilePage: View {
+    @EnvironmentObject var dbHelper : FireDBHelper
+    @Environment(\.dismiss) var dismiss
     @State private var username = "User"
     @State private var email = "user@example.com"
     

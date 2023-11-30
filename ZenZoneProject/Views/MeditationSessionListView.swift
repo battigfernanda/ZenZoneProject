@@ -10,6 +10,7 @@ import SwiftUI
 struct MeditationSessionListView: View {
     @State private var sessions: [MeditationSession] = []
 
+
     var body: some View {
         NavigationView {
             List(sessions) { session in
