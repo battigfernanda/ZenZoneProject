@@ -20,6 +20,7 @@ struct SignUPView: View {
     @State var username : String = ""
     @State  var email : String = ""
     @State var password : String = ""
+    @State var goBack = false
     
     var body: some View {
         VStack{
@@ -62,6 +63,19 @@ struct SignUPView: View {
                     Text("Create Account")
                 }
                 .buttonStyle(.borderedProminent)
+                
+                Button(action: {
+                    //validate inputs
+                    
+                    //create account using firebaseAuth
+                    self.loginPage()
+                }){
+                    Text("Back to Sign In ")
+                }
+                .buttonStyle(.borderedProminent)
+                
+                
+                
             }
             
             Spacer()
@@ -105,6 +119,10 @@ struct SignUPView: View {
         let newUser = User(firstName: self.firstName, lastname: self.lastName, age: self.age, username: self.username, email: self.email, password: "*****")
         self.dbHelper.insertUser(user: newUser)
         dismiss()
+    }
+    
+    private func loginPage(){
+        self.rootView = . login
     }
 }
 

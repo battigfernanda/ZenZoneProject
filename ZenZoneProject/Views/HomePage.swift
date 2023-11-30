@@ -35,6 +35,13 @@ struct HomePageView: View {
                             .cornerRadius(10)
                             .shadow(radius: 5)
                         }
+                        .toolbar{
+                            ToolbarItem {
+                                Button(action: signOut) {
+                                    Label("Add Item", systemImage: "door.right.hand.open")
+                                }
+                            }
+                        }
                     }
 
                     // Wellness Tracking
@@ -57,6 +64,10 @@ struct HomePageView: View {
             .navigationBarTitle("ZenZone", displayMode: .inline)
             .navigationBarItems(trailing: ProfileButton())
         }
+       
+    }
+    private func signOut(){
+        self.rootView = .login
     }
 }
 
@@ -150,6 +161,8 @@ struct ExploreSpotsCard: View {
             .cornerRadius(10)
     }
 }
+
+
 
 //struct HomePageView_Previews: PreviewProvider {
 //    static var previews: some View {
