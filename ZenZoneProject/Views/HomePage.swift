@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomePageView: View {
+    @Binding var rootView : RootView
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
@@ -31,8 +32,14 @@ struct HomePageView: View {
             }
             .navigationBarTitle("ZenZone", displayMode: .inline)
             .navigationBarItems(trailing: ProfileButton())
+//            .navigationBarItems(trailing: SignOutButton())
+            
+            
         }
+        
+        
     }
+    
 }
 
 // Reusable Section Link View
@@ -72,6 +79,19 @@ struct ProfileButton: View {
         }
     }
 }
+
+//struct SignOutButton: View {
+//    var body: some View {
+//        Button(
+//            action: {
+//
+//        }) {
+//            Image(systemName: "door.right.hand.open")
+//                .imageScale(.large)
+//                .foregroundColor(.blue)
+//        }
+//    }
+//}
 
 struct HeaderView: View {
     var body: some View {
@@ -141,8 +161,8 @@ struct ExploreSpotsView: View {
     }
 }
 
-struct HomePageView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePageView()
-    }
-}
+//struct HomePageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomePageView()
+//    }
+//}
