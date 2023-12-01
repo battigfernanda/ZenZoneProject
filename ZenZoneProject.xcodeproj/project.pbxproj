@@ -27,6 +27,21 @@
 		C05AC1F92B18D1EE00032293 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C05AC1F82B18D1EE00032293 /* GoogleService-Info.plist */; };
 		C05AC1FB2B18D34900032293 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AC1FA2B18D34900032293 /* RootView.swift */; };
 		C05AC1FF2B18DDE400032293 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05AC1FE2B18DDE400032293 /* LaunchView.swift */; };
+		D51181852B1A5B790001F281 /* ZenZoneProjectWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51181842B1A5B790001F281 /* ZenZoneProjectWatchApp.swift */; };
+		D51181872B1A5B790001F281 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51181862B1A5B790001F281 /* ContentView.swift */; };
+		D51181892B1A5B7C0001F281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D51181882B1A5B7C0001F281 /* Assets.xcassets */; };
+		D511818C2B1A5B7C0001F281 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D511818B2B1A5B7C0001F281 /* Preview Assets.xcassets */; };
+		D511818F2B1A5B7C0001F281 /* ZenZoneProjectWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D51181822B1A5B780001F281 /* ZenZoneProjectWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D51181942B1A5B930001F281 /* MeditationSession.json in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F0D2B12E4C900D9C1C1 /* MeditationSession.json */; };
+		D51181952B1A5B9A0001F281 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8F032B12E41F00D9C1C1 /* MediaPlayer.swift */; };
+		D51181962B1A5B9D0001F281 /* MeditationDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8F052B12E43A00D9C1C1 /* MeditationDataLoader.swift */; };
+		D51181982B1A5BF70001F281 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51181972B1A5BF70001F281 /* SessionView.swift */; };
+		D511819A2B1A5C1F0001F281 /* SessionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51181992B1A5C1F0001F281 /* SessionDetailView.swift */; };
+		D511819C2B1A5C450001F281 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D511819B2B1A5C450001F281 /* AudioPlayerManager.swift */; };
+		D511819D2B1A5D4C0001F281 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51181972B1A5BF70001F281 /* SessionView.swift */; };
+		D511819E2B1A5D4F0001F281 /* SessionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51181992B1A5C1F0001F281 /* SessionDetailView.swift */; };
+		D511819F2B1A5D510001F281 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D511819B2B1A5C450001F281 /* AudioPlayerManager.swift */; };
+		D51181A02B1A5D5D0001F281 /* MeditationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8F0A2B12E48600D9C1C1 /* MeditationSession.swift */; };
 		D54E8CF52B14389D00C9DD23 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8CF42B14389D00C9DD23 /* ProfilePage.swift */; };
 		D54E8CF72B1438B600C9DD23 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8CF62B1438B600C9DD23 /* LoginPage.swift */; };
 		D54E8CF92B14390300C9DD23 /* SignupPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E8CF82B14390300C9DD23 /* SignupPage.swift */; };
@@ -58,12 +73,44 @@
 		D5DB8F162B135E0C00D9C1C1 /* SelfGuidedMeditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8F152B135E0C00D9C1C1 /* SelfGuidedMeditation.mp3 */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D511818D2B1A5B7C0001F281 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5DB8EE22B12DD5300D9C1C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D51181812B1A5B780001F281;
+			remoteInfo = "ZenZoneProjectWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D51181932B1A5B7C0001F281 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D511818F2B1A5B7C0001F281 /* ZenZoneProjectWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C05AC1F42B18D0B700032293 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C05AC1F62B18D11300032293 /* FireDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDBHelper.swift; sourceTree = "<group>"; };
 		C05AC1F82B18D1EE00032293 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C05AC1FA2B18D34900032293 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		C05AC1FE2B18DDE400032293 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		D51181822B1A5B780001F281 /* ZenZoneProjectWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZenZoneProjectWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D51181842B1A5B790001F281 /* ZenZoneProjectWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenZoneProjectWatchApp.swift; sourceTree = "<group>"; };
+		D51181862B1A5B790001F281 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D51181882B1A5B7C0001F281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D511818B2B1A5B7C0001F281 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D51181972B1A5BF70001F281 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		D51181992B1A5C1F0001F281 /* SessionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailView.swift; sourceTree = "<group>"; };
+		D511819B2B1A5C450001F281 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
 		D54E8CF42B14389D00C9DD23 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		D54E8CF62B1438B600C9DD23 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		D54E8CF82B14390300C9DD23 /* SignupPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPage.swift; sourceTree = "<group>"; };
@@ -97,6 +144,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D511817F2B1A5B780001F281 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5DB8EE72B12DD5300D9C1C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -122,10 +176,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D51181832B1A5B790001F281 /* ZenZoneProjectWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				D51181842B1A5B790001F281 /* ZenZoneProjectWatchApp.swift */,
+				D51181862B1A5B790001F281 /* ContentView.swift */,
+				D51181882B1A5B7C0001F281 /* Assets.xcassets */,
+				D511818A2B1A5B7C0001F281 /* Preview Content */,
+				D51181972B1A5BF70001F281 /* SessionView.swift */,
+				D51181992B1A5C1F0001F281 /* SessionDetailView.swift */,
+				D511819B2B1A5C450001F281 /* AudioPlayerManager.swift */,
+			);
+			path = "ZenZoneProjectWatch Watch App";
+			sourceTree = "<group>";
+		};
+		D511818A2B1A5B7C0001F281 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D511818B2B1A5B7C0001F281 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		D5DB8EE12B12DD5300D9C1C1 = {
 			isa = PBXGroup;
 			children = (
 				D5DB8EEC2B12DD5300D9C1C1 /* ZenZoneProject */,
+				D51181832B1A5B790001F281 /* ZenZoneProjectWatch Watch App */,
 				D5DB8EEB2B12DD5300D9C1C1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				D5DB8EEA2B12DD5300D9C1C1 /* ZenZoneProject.app */,
+				D51181822B1A5B780001F281 /* ZenZoneProjectWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,6 +308,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D51181812B1A5B780001F281 /* ZenZoneProjectWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D51181902B1A5B7C0001F281 /* Build configuration list for PBXNativeTarget "ZenZoneProjectWatch Watch App" */;
+			buildPhases = (
+				D511817E2B1A5B780001F281 /* Sources */,
+				D511817F2B1A5B780001F281 /* Frameworks */,
+				D51181802B1A5B780001F281 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ZenZoneProjectWatch Watch App";
+			productName = "ZenZoneProjectWatch Watch App";
+			productReference = D51181822B1A5B780001F281 /* ZenZoneProjectWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D5DB8EE92B12DD5300D9C1C1 /* ZenZoneProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5DB8EF82B12DD5600D9C1C1 /* Build configuration list for PBXNativeTarget "ZenZoneProject" */;
@@ -237,10 +332,12 @@
 				D5DB8EE62B12DD5300D9C1C1 /* Sources */,
 				D5DB8EE72B12DD5300D9C1C1 /* Frameworks */,
 				D5DB8EE82B12DD5300D9C1C1 /* Resources */,
+				D51181932B1A5B7C0001F281 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D511818E2B1A5B7C0001F281 /* PBXTargetDependency */,
 			);
 			name = ZenZoneProject;
 			packageProductDependencies = (
@@ -274,6 +371,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					D51181812B1A5B780001F281 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 					D5DB8EE92B12DD5300D9C1C1 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
@@ -296,11 +396,22 @@
 			projectRoot = "";
 			targets = (
 				D5DB8EE92B12DD5300D9C1C1 /* ZenZoneProject */,
+				D51181812B1A5B780001F281 /* ZenZoneProjectWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D51181802B1A5B780001F281 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D51181942B1A5B930001F281 /* MeditationSession.json in Resources */,
+				D511818C2B1A5B7C0001F281 /* Preview Assets.xcassets in Resources */,
+				D51181892B1A5B7C0001F281 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5DB8EE82B12DD5300D9C1C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,6 +436,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D511817E2B1A5B780001F281 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D51181962B1A5B9D0001F281 /* MeditationDataLoader.swift in Sources */,
+				D51181982B1A5BF70001F281 /* SessionView.swift in Sources */,
+				D51181872B1A5B790001F281 /* ContentView.swift in Sources */,
+				D51181852B1A5B790001F281 /* ZenZoneProjectWatchApp.swift in Sources */,
+				D51181A02B1A5D5D0001F281 /* MeditationSession.swift in Sources */,
+				D511819A2B1A5C1F0001F281 /* SessionDetailView.swift in Sources */,
+				D511819C2B1A5C450001F281 /* AudioPlayerManager.swift in Sources */,
+				D51181952B1A5B9A0001F281 /* MediaPlayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5DB8EE62B12DD5300D9C1C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,7 +462,10 @@
 				D5DB8EFD2B12E0E600D9C1C1 /* MeditationSessionDetailView.swift in Sources */,
 				D54E8D0B2B14E7F700C9DD23 /* ExploreSpotsView.swift in Sources */,
 				D5DB8F062B12E43A00D9C1C1 /* MeditationDataLoader.swift in Sources */,
+				D511819D2B1A5D4C0001F281 /* SessionView.swift in Sources */,
+				D511819E2B1A5D4F0001F281 /* SessionDetailView.swift in Sources */,
 				C05AC1FB2B18D34900032293 /* RootView.swift in Sources */,
+				D511819F2B1A5D510001F281 /* AudioPlayerManager.swift in Sources */,
 				D5DB8EF02B12DD5300D9C1C1 /* ContentView.swift in Sources */,
 				C05AC1F72B18D11300032293 /* FireDBHelper.swift in Sources */,
 				C05AC1F52B18D0B700032293 /* User.swift in Sources */,
@@ -354,7 +483,75 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D511818E2B1A5B7C0001F281 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D51181812B1A5B780001F281 /* ZenZoneProjectWatch Watch App */;
+			targetProxy = D511818D2B1A5B7C0001F281 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		D51181912B1A5B7C0001F281 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ZenZoneProjectWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = C26735D5VT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ZenZoneProjectWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.fb.ZenZoneProject;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fb.ZenZoneProject.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		D51181922B1A5B7C0001F281 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ZenZoneProjectWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = C26735D5VT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ZenZoneProjectWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.fb.ZenZoneProject;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fb.ZenZoneProject.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 		D5DB8EF62B12DD5600D9C1C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,12 +674,13 @@
 		D5DB8EF92B12DD5600D9C1C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ZenZoneProject/Preview Content\"";
-				DEVELOPMENT_TEAM = YV6DXDN3TS;
+				DEVELOPMENT_TEAM = C26735D5VT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires location services to find serene spots near you.";
@@ -510,12 +708,13 @@
 		D5DB8EFA2B12DD5600D9C1C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ZenZoneProject/Preview Content\"";
-				DEVELOPMENT_TEAM = YV6DXDN3TS;
+				DEVELOPMENT_TEAM = C26735D5VT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires location services to find serene spots near you.";
@@ -543,6 +742,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D51181902B1A5B7C0001F281 /* Build configuration list for PBXNativeTarget "ZenZoneProjectWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D51181912B1A5B7C0001F281 /* Debug */,
+				D51181922B1A5B7C0001F281 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D5DB8EE52B12DD5300D9C1C1 /* Build configuration list for PBXProject "ZenZoneProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
