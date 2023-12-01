@@ -1,68 +1,99 @@
 //
-//  LoginPage.swift
-//  ZenZoneProject
+//  SignInView.swift
+//  test
 //
-//  Created by Fernanda Battig on 2023-11-26.
+//  Created by Muhammad Haris on 28/11/2023.
 //
-
-// FOR HARIS - ADD AUTHENTICATION AND HANDLE REQUESTS VIA FIREBASE
 
 import SwiftUI
-
-// Define an enum for navigation
-enum NavigationItem: Hashable {
-    case profilePage
-}
+import FirebaseAuth
 
 struct LoginPage: View {
-    @State private var email = ""
-    @State private var password = ""
-    @State private var navigationItem: NavigationItem?
-
+    
+    @Binding var rootView : RootView
+    
+    @State private var email : String = "user1@gmail.com"
+    @State private var password : String = "pass1234"
+    
     var body: some View {
-        NavigationStack {
-            VStack {
-                TextField("Email", text: $email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
+        VStack{
+            
+            Form{
                 
-                SecureField("Password", text: $password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-
-                Button("Login") {
-                    // Authentication logic goes here
-                    // On success, trigger navigation
-                    self.navigationItem = .profilePage
-                }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-                .padding(.horizontal)
-
-                if let navigationItem = navigationItem {
-                    NavigationLink(value: navigationItem) {
-                        EmptyView()
+                
+                TextField("email address ", text: $email)
+                    .autocorrectionDisabled(true)
+                    .textInputAutocapitalization(.never)
+                
+                
+                SecureField("password", text: $password)
+                    .autocorrectionDisabled(true)
+                    .textInputAutocapitalization(.never)
+                HStack{
+                    Button(action: {
+                        //validate inputs
+                        
+                        //login using FirebaseAuth
+                        self.login()
+                    }){
+                        Text("Login")
                     }
+                    .buttonStyle(.borderedProminent)
+                    
+                    Button(action: {
+                        //validate inputs
+                        
+                        //login using FirebaseAuth
+                        self.signUp()
+                    }){
+                        Text("signUP")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    
                 }
+                
+                
+                
+                //Task - provide a button to go to SignUpView
+                //send the rootView as binding variable
             }
-            .navigationDestination(for: NavigationItem.self) { item in
-                switch item {
-                case .profilePage:
-                    ProfilePage()
+            
+            Spacer()
+            
+        }
+        
+    }//body
+    
+    private func login(){
+        Auth.auth().signIn(withEmail: self.email, password: self.password){ authResult, error in
+            
+            guard let result = authResult else{
+                print(#function, "Unable to sign in due to error : \(error)")
+                return
+            }
+            
+            print(#function, "authResult : \(authResult)")
+            
+            switch(authResult){
+            case .none:
+                print(#function, "Unsuccesful sign in attempt")
+            case .some(_):
+                print(#function, "Login successful")
+                
+                if (authResult != nil){
+                    print(#function, "user info Email : \(authResult!.user.email)")
+                    print(#function, "user info Name : \(authResult!.user.displayName)")
                 }
+                
+                UserDefaults.standard.set(authResult!.user.email, forKey: "KEY_EMAIL")
+                
+                //modify the root view value to replace the SignInView() with MainView in the NavigationStack
+                self.rootView = .main
             }
-            .navigationBarTitle("Login", displayMode: .inline)
+            
         }
     }
-}
-
-
-
-struct LoginPage_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginPage()
+    private func signUp(){
+        self.rootView = .signup
     }
 }
