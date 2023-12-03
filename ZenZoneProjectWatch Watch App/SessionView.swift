@@ -11,15 +11,18 @@ struct SessionListView: View {
     @State private var sessions: [MeditationSession] = MeditationDataLoader.loadMeditationSessions()
 
     var body: some View {
-        List(sessions) { session in
-            NavigationLink(destination: SessionDetailView(session: session)) {
-                VStack(alignment: .leading) {
-                    Text(session.title)
-                        .fontWeight(.bold)
-                    Text("Duration: \(session.duration) mins")
-                        .font(.caption)
+        NavigationView {
+            List(sessions) { session in
+                NavigationLink(destination: SessionDetailView(session: session)) {
+                    VStack(alignment: .leading) {
+                        Text(session.title)
+                            .fontWeight(.bold)
+                        Text("Duration: \(session.duration) mins")
+                            .font(.caption)
+                    }
                 }
             }
+            .navigationTitle("Sessions") 
         }
     }
 }

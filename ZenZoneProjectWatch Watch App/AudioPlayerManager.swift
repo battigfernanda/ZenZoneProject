@@ -7,24 +7,51 @@
 
 
 import AVFoundation
-
+import Combine
 
 class AudioPlayerManager: ObservableObject {
     private var audioPlayer: AVPlayer?
+    private var playerItem: AVPlayerItem?
+    private var audioSession = AVAudioSession.sharedInstance()
+    private var playerStatusObserver: AnyCancellable?
 
-    func playAudio(fileName: String) {
-        guard let audioFileURL = Bundle.main.url(forResource: fileName, withExtension: "mp3") else {
+    init() {
+        
+        do {
+            try audioSession.setCategory(.playback)
+        } catch {
+            print("Setting category to AVAudioSessionCategoryPlayback failed.")
+        }
+    }
+
+    func playAudio(file name: String, ofType type: String) {
+        guard let path = Bundle.main.path(forResource: name, ofType: type) else {
+            print("Audio file not found")
             return
         }
 
-        // Initializing and playing the audio player
-        audioPlayer = AVPlayer(url: audioFileURL)
+        
+        let audioFileURL = URL(fileURLWithPath: path)
+
+   
+        playerItem = AVPlayerItem(url: audioFileURL)
+        audioPlayer = AVPlayer(playerItem: playerItem)
+
+       
+        playerStatusObserver = NotificationCenter.default.publisher(for: .AVPlayerItemDidPlayToEndTime, object: playerItem)
+            .sink(receiveValue: { [weak self] _ in
+                self?.playerDidFinishPlaying()
+            })
         audioPlayer?.play()
     }
 
     func stopAudio() {
         audioPlayer?.pause()
+        playerStatusObserver?.cancel()
+    }
+
+    private func playerDidFinishPlaying() {
+        print("Playback finished.")
+        
     }
 }
-
-
