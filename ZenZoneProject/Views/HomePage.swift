@@ -26,11 +26,11 @@ struct HomePageView: View {
                         SectionLink(title: "Community Spotlight", destination: CommunitySpotlightView(), buttonText: "Join the Community")
                         
                         // Explore Serene Spots
-<<<<<<< HEAD
-                        SectionLink(title: "Explore Serene Spots", destination: NearbyParksView(), buttonText: "Explore Serene Spots", rootView: self.$rootView)
-=======
+
+                        SectionLink(title: "Explore Serene Spots", destination: NearbyParksView(), buttonText: "Explore Serene Spots")
+
                         SectionLink(title: "Explore Serene Spots", destination: ExploreSpotsView(), buttonText: "Explore Serene Spots")
->>>>>>> main
+
                     }
                     .padding(.horizontal)
                     
@@ -81,16 +81,15 @@ struct SectionLink<Destination: View>: View {
 }
 struct ProfileButton: View {
     var body: some View {
-        Button(
-            action: {
-            // Action for profile button
-        }) {
-            Image(systemName: "person.crop.circle")
-                .imageScale(.large)
-                .foregroundColor(.blue)
-        }
+        NavigationLink(destination: ProfilePage()) {
+                    Image(systemName: "person.crop.circle")
+                        .imageScale(.large)
+                        .foregroundColor(.blue)
+                }
+            }
+    
     }
-}
+
 
 //struct SignOutButton: View {
 //    var body: some View {
