@@ -40,7 +40,7 @@ class FireDBHelper : ObservableObject{
         auth.createUser(withEmail: email, password: password){[weak self] result, error in
             guard result != nil, error == nil else{return}
             DispatchQueue.main.async{
-                self?.add(User(firstName: firstName, lastName: lastName, username: username, email: email, password: password))
+                self?.add(User(firstName: firstName, lastName: lastName,age: age, username: username, email: email, password: password))
                 self?.sync()
             }
         }

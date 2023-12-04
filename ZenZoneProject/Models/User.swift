@@ -13,7 +13,7 @@ struct User :  Codable{
     
     var firstName : String
     var lastName : String
-    var age : Int?
+    var age : Int
     var username : String
     var email : String
     var password : String

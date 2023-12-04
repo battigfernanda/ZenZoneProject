@@ -76,7 +76,7 @@ struct SignUPView: View{
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
                 Button(action:{
-                    user.signUp(email: email, firstName: firstName, lastName: lastName, password: password, age: age, username: username)
+                    user.signUp(email: email, firstName: firstName, lastName: lastName, password: password, age: self.age, username: username)
                     }) {
                         Text("sign Up")
                     }
