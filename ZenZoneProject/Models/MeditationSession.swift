@@ -14,3 +14,23 @@ struct MeditationSession: Identifiable, Codable {
     var audioFileName: String
     var imageName: String
 }
+
+struct Response: Codable {
+    let results: [Place]
+}
+
+struct Place: Codable {
+    let id: String
+    let name: String
+    let geometry: Geometry
+}
+
+struct Geometry: Codable {
+    let location: Location
+}
+
+struct Location: Codable {
+    let lat: Double
+    let lng: Double
+}
+

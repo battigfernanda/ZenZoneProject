@@ -27,7 +27,7 @@ struct HomePageView: View {
                         SectionLink(title: "Community Spotlight", destination: CommunitySpotlightView(), buttonText: "Join the Community", rootView: self.$rootView)
                         
                         // Explore Serene Spots
-                        SectionLink(title: "Explore Serene Spots", destination: ExploreSpotsView(), buttonText: "Explore Serene Spots", rootView: self.$rootView)
+                        SectionLink(title: "Explore Serene Spots", destination: NearbyParksView(), buttonText: "Explore Serene Spots", rootView: self.$rootView)
                     }
                     .padding(.horizontal)
                     
