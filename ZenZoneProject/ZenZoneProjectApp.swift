@@ -7,18 +7,20 @@
 
 import SwiftUI
 import Firebase
-import FirebaseFirestore
+import UIKit
 
 @main
-struct ZenZoneProjectApp: App {
+struct ZenZone_DBApp: App {
     
     init() {
         FirebaseApp.configure()
     }
-    
+    //    @UIApplicationDelegateAdaptor{AppDelegate.self} var appDelegate
     var body: some Scene {
         WindowGroup {
-            LaunchView()
+            let user = FireDBHelper()
+            LaunchView().environmentObject(user)
+                
         }
     }
 }

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomePageView: View {
-    @Binding var rootView : RootView
     var body: some View {
         
             NavigationView {
@@ -18,16 +17,20 @@ struct HomePageView: View {
                         HeaderView()
                         
                         // Meditation Session List View
-                        SectionLink(title: "Meditation Sessions", destination: MeditationSessionListView(), buttonText: "View All Meditation Sessions", rootView: self.$rootView)
+                        SectionLink(title: "Meditation Sessions", destination: MeditationSessionListView(), buttonText: "View All Meditation Sessions")
                         
                         // Wellness Tracking
-                        SectionLink(title: "Your Wellness Stats", destination: WellnessTrackingView(), buttonText: "Track Your Wellness", rootView: self.$rootView)
+                        SectionLink(title: "Your Wellness Stats", destination: WellnessTrackingView(), buttonText: "Track Your Wellness")
                         
                         // Community Spotlight
-                        SectionLink(title: "Community Spotlight", destination: CommunitySpotlightView(), buttonText: "Join the Community", rootView: self.$rootView)
+                        SectionLink(title: "Community Spotlight", destination: CommunitySpotlightView(), buttonText: "Join the Community")
                         
                         // Explore Serene Spots
+<<<<<<< HEAD
                         SectionLink(title: "Explore Serene Spots", destination: NearbyParksView(), buttonText: "Explore Serene Spots", rootView: self.$rootView)
+=======
+                        SectionLink(title: "Explore Serene Spots", destination: ExploreSpotsView(), buttonText: "Explore Serene Spots")
+>>>>>>> main
                     }
                     .padding(.horizontal)
                     
@@ -52,7 +55,6 @@ struct SectionLink<Destination: View>: View {
     var title: String
     var destination: Destination
     var buttonText: String
-    @Binding var rootView : RootView
 
 
     var body: some View {
@@ -71,22 +73,11 @@ struct SectionLink<Destination: View>: View {
                 .cornerRadius(10)
                 .shadow(radius: 5)
             }
-            .toolbar{
-                ToolbarItem{
-                    Button(action: signOut) {
-                        Label("Add Item", systemImage: "door.right.hand.open")
-                        
-                            .foregroundColor(.red)
-                    }
-
-                }
-            }
+            
         }
         
     }
-    private func signOut(){
-        self.rootView = .login
-    }
+    
 }
 struct ProfileButton: View {
     var body: some View {
