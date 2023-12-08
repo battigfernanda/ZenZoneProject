@@ -29,8 +29,6 @@ struct HomePageView: View {
 
                         SectionLink(title: "Explore Serene Spots", destination: NearbyParksView(), buttonText: "Explore Serene Spots")
 
-                        SectionLink(title: "Explore Serene Spots", destination: ExploreSpotsView(), buttonText: "Explore Serene Spots")
-
                     }
                     .padding(.horizontal)
                     

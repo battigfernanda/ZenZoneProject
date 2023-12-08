@@ -13,6 +13,8 @@ struct NearbyParksView: View {
     @State private var parks: [Park] = []
     
     var body: some View {
+        MapView(parks: parks, userLocation: locationManager.lastLocation?.coordinate ?? CLLocationCoordinate2D())
+                        .frame(height: 300)
         List(parks, id: \.id) { park in
             NavigationLink(destination: ParkDetailView(park: park)) {
                 HStack {
@@ -83,19 +85,32 @@ struct ParkDetailView: View {
 struct Response: Codable {
     let results: [Park]
     let status: String
-   
 }
 
 struct Park: Codable, Identifiable {
     let id: String
     let name: String
+    let icon: String
+    let rating: Double
+    let userRatingsTotal: Int
+    let vicinity: String
     let geometry: Geometry
-   
 
     var coordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: geometry.location.lat, longitude: geometry.location.lng)
     }
+
+    enum CodingKeys: String, CodingKey {
+        case id = "place_id"
+        case name
+        case icon
+        case rating
+        case userRatingsTotal = "user_ratings_total"
+        case vicinity
+        case geometry
+    }
 }
+
 
 
 struct NearbyParksView_Previews: PreviewProvider {

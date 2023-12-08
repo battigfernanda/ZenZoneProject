@@ -66,6 +66,7 @@
 		D54E8D0D2B14EA2C00C9DD23 /* BreathSoundBody.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D54E8D0C2B14EA2C00C9DD23 /* BreathSoundBody.mp3 */; };
 		D54E8D0F2B14EAA200C9DD23 /* 4MinuteBodyScan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D54E8D0E2B14EAA200C9DD23 /* 4MinuteBodyScan.mp3 */; };
 		D54E8D112B14EBA300C9DD23 /* 20MinutesBells.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D54E8D102B14EBA300C9DD23 /* 20MinutesBells.mp3 */; };
+		D5A1A2012B238C0E00119F67 /* MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1A2002B238C0E00119F67 /* MKMapView.swift */; };
 		D5DB8EEE2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8EED2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift */; };
 		D5DB8EF02B12DD5300D9C1C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB8EEF2B12DD5300D9C1C1 /* ContentView.swift */; };
 		D5DB8EF22B12DD5600D9C1C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5DB8EF12B12DD5600D9C1C1 /* Assets.xcassets */; };
@@ -135,6 +136,7 @@
 		D54E8D0C2B14EA2C00C9DD23 /* BreathSoundBody.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BreathSoundBody.mp3; sourceTree = "<group>"; };
 		D54E8D0E2B14EAA200C9DD23 /* 4MinuteBodyScan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4MinuteBodyScan.mp3; sourceTree = "<group>"; };
 		D54E8D102B14EBA300C9DD23 /* 20MinutesBells.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 20MinutesBells.mp3; sourceTree = "<group>"; };
+		D5A1A2002B238C0E00119F67 /* MKMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapView.swift; sourceTree = "<group>"; };
 		D5DB8EEA2B12DD5300D9C1C1 /* ZenZoneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenZoneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DB8EED2B12DD5300D9C1C1 /* ZenZoneProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenZoneProjectApp.swift; sourceTree = "<group>"; };
 		D5DB8EEF2B12DD5300D9C1C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				D54E8D0A2B14E7F700C9DD23 /* ExploreSpotsView.swift */,
 				C05AC1FA2B18D34900032293 /* RootView.swift */,
 				C05AC1FE2B18DDE400032293 /* LaunchView.swift */,
+				D5A1A2002B238C0E00119F67 /* MKMapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				D54E8CF52B14389D00C9DD23 /* ProfilePage.swift in Sources */,
 				C05AC1FF2B18DDE400032293 /* LaunchView.swift in Sources */,
 				D5DB8F012B12E10F00D9C1C1 /* HomePage.swift in Sources */,
+				D5A1A2012B238C0E00119F67 /* MKMapView.swift in Sources */,
 				D54E8D072B14E7C000C9DD23 /* WellnessTrackingView.swift in Sources */,
 				D5DB8EFD2B12E0E600D9C1C1 /* MeditationSessionDetailView.swift in Sources */,
 				D54E8D0B2B14E7F700C9DD23 /* ExploreSpotsView.swift in Sources */,
