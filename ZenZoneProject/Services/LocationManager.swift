@@ -1,4 +1,4 @@
-//
+///
 //  LocationManager.swift
 //  ZenZoneProject
 //
@@ -15,41 +15,27 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 
     override init() {
         super.init()
-        self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters // More battery-efficient
-        self.locationManager.distanceFilter = 50 // Update every 50 meters
-        self.checkIfLocationServicesIsEnabled()
-    }
-
-    func checkIfLocationServicesIsEnabled() {
-        if CLLocationManager.locationServicesEnabled() {
-            DispatchQueue.main.async {
-                self.locationManager.requestWhenInUseAuthorization()
-            }
-        } else {
-            print("Location services are not enabled")
-        }
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.distanceFilter = 50
+        locationManager.requestWhenInUseAuthorization() // Request authorization
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        self.locationStatus = status
-        if status == .authorizedWhenInUse || status == .authorizedAlways {
-            print("Location Authorization Granted.")
-            self.locationManager.startUpdatingLocation()
-        } else {
-            DispatchQueue.main.async {
-                // Handle other authorization statuses on the main thread
-                switch status {
-                case .denied, .restricted:
-                    print("Location Authorization Denied or Restricted.")
-                    // Handle denied/restricted status
-                case .notDetermined:
-                    print("Location Authorization Not Determined.")
-                    // Handle not determined status
-                @unknown default:
-                    print("Unknown Location Authorization Status.")
-                    // Handle future cases
-                }
+        DispatchQueue.main.async {
+            self.locationStatus = status
+            switch status {
+            case .notDetermined:
+                // The status is not determined, no need to request again as it's requested in init
+                break
+            case .authorizedWhenInUse, .authorizedAlways:
+                print("Location Authorization Granted.")
+                self.locationManager.startUpdatingLocation()
+            case .denied, .restricted:
+                print("Location Authorization Denied or Restricted.")
+            @unknown default:
+                print("Unknown Location Authorization Status.")
+                
             }
         }
     }
