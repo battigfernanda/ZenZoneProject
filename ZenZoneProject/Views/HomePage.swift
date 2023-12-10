@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomePageView: View {
+    @EnvironmentObject var user: FireDBHelper
+
     var body: some View {
         
             NavigationView {
@@ -50,6 +52,8 @@ struct HomePageView: View {
 
 // Reusable Section Link View
 struct SectionLink<Destination: View>: View {
+    @EnvironmentObject var user: FireDBHelper
+
     var title: String
     var destination: Destination
     var buttonText: String
@@ -78,6 +82,8 @@ struct SectionLink<Destination: View>: View {
     
 }
 struct ProfileButton: View {
+    @EnvironmentObject var user: FireDBHelper
+
     var body: some View {
         NavigationLink(destination: ProfilePage()) {
                     Image(systemName: "person.crop.circle")
@@ -103,6 +109,8 @@ struct ProfileButton: View {
 //}
 
 struct HeaderView: View {
+    @EnvironmentObject var user: FireDBHelper
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Welcome to ZenZone")
@@ -117,6 +125,8 @@ struct HeaderView: View {
 }
 
 struct SectionView<Content: View>: View {
+    @EnvironmentObject var user: FireDBHelper
+
     let title: String
     let content: Content
 
@@ -136,6 +146,8 @@ struct SectionView<Content: View>: View {
 }
 
 struct MeditationSessionCard: View {
+    @EnvironmentObject var user: FireDBHelper
+
     var body: some View {
         VStack {
             Image("meditation")
@@ -153,18 +165,24 @@ struct MeditationSessionCard: View {
 
 // Dummy views to view preview
 struct WellnessTrackingView: View {
+    @EnvironmentObject var user: FireDBHelper
+
     var body: some View {
         Text("Wellness Tracking View")
     }
 }
 
 struct CommunitySpotlightView: View {
+    @EnvironmentObject var user: FireDBHelper
+
     var body: some View {
         Text("Community Spotlight View")
     }
 }
 
 struct ExploreSpotsView: View {
+    @EnvironmentObject var user: FireDBHelper
+
     var body: some View {
         Text("Explore Spots View")
     }

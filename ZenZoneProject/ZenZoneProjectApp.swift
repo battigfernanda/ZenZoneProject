@@ -25,13 +25,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 @main
 struct ZenZone_DBApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+   
 
     var body: some Scene {
         WindowGroup {
             let user = FireDBHelper()
 
             // Your primary view
-            HomePageView()
+//            HomePageView()
+            LaunchView().environmentObject(user)
         }
     }
 }
