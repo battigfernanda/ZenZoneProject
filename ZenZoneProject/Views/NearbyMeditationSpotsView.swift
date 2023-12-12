@@ -11,25 +11,33 @@ import CoreLocation
 struct NearbyParksView: View {
     @StateObject private var locationManager = LocationManager()
     @State private var parks: [Park] = []
-    
+
     var body: some View {
-        MapView(parks: parks, userLocation: locationManager.lastLocation?.coordinate ?? CLLocationCoordinate2D())
-                        .frame(height: 300)
-        List(parks, id: \.id) { park in
-            NavigationLink(destination: ParkDetailView(park: park)) {
-                HStack {
-                    Image(systemName: "leaf.fill")
-                        .foregroundColor(.green)
-                    Text(park.name)
+        VStack {
+            MapView(parks: parks, userLocation: locationManager.lastLocation?.coordinate ?? CLLocationCoordinate2D())
+                .frame(height: 300)
+            
+            List(parks, id: \.id) { park in
+                NavigationLink(destination: ParkDetailView(park: park)) {
+                    HStack {
+                        Image(systemName: "leaf.fill")
+                            .foregroundColor(.green)
+                        Text(park.name)
+                    }
                 }
             }
         }
-    
+        .onAppear {
+            fetchNearbyParks(location: locationManager.lastLocation)
+            Text("Number of Parks: \(parks.count)")
+
+        }
         .onChange(of: locationManager.lastLocation) { newLocation in
             fetchNearbyParks(location: newLocation)
         }
         .navigationTitle("Nearby Parks")
     }
+
 
     func fetchNearbyParks(location: CLLocation?) {
         guard let location = location else { return }
